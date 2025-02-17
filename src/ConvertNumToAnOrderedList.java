@@ -15,6 +15,8 @@ public class ConvertNumToAnOrderedList {
         String[] numArr = inputNum.split("");
         List<String> numList = new ArrayList<>(Arrays.asList(numArr)); //Chuyển List sang ArrayList
         Collections.sort(numList); //Sắp xếp các phần tử trong ArrayList
-        System.out.println("Sorted list: " + numList);
+        System.out.println("Sorted list: " + numList); //In ra list được sắp xếp
+        System.out.println("Output: " + String.join(",", numList)); //In ra một chuỗi phân cách bằng dấu phẩy
+        sc.close();
     }
 }
