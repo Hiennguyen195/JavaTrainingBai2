@@ -8,7 +8,6 @@ public class ConvertNumToAnOrderedList {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         String inputNum;
-        String output;
 
         System.out.println("Enter an number: "); // Nhập chuỗi cần sắp xếp
         inputNum = sc.nextLine();
