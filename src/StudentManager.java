@@ -31,6 +31,8 @@ public class StudentManager {
                 name = std.getStudentName();
             }
         }
-        System.out.format("The student that have the highest point is: %s with %d points",name, point);
+        System.out.format("The student that have the highest point is %s with %d points", name, point);
+
+        //In ra danh sach theo thu tu giam dan theo point
     }
 }
