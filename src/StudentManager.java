@@ -20,7 +20,7 @@ public class StudentManager {
         //In ra danh sach hoc sinh
         for (int i = 0; i < studentList.size(); i++) {
             Student std = studentList.get(i);
-            std.showInfo();
+            System.out.println(std.getStudentName() + ": " + std.getStudentExamPoints());
         }
 
         //Tim sinh vien co diem cao nhat
