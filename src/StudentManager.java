@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 
 public class StudentManager {
@@ -31,8 +32,30 @@ public class StudentManager {
                 name = std.getStudentName();
             }
         }
-        System.out.format("The student that have the highest point is %s with %d points", name, point);
+        System.out.format("The student that have the highest point is %s with %d points\n", name, point);
 
         //In ra danh sach theo thu tu giam dan theo point
+
+        //CÁCH 1: Sử dụng hàm lambda cho Java 8+, không phải ghi đè phương thức compare()
+//        studentList.sort((s1, s2) -> {
+//            return Integer.compare(s2.getStudentExamPoints(), s1.getStudentExamPoints()); // Sắp xếp giảm dần
+//        });
+
+        //CÁCH 2: Nhanh nhất, gọn nhất, dễ đọc nhất, sử dụng reversed() cho hiệu suất nhanh nhất
+        studentList.sort(Comparator.comparing(Student::getStudentExamPoints).reversed());
+
+        //CÁCH 3: Cơ bản nhất, phải ghi đè phương thức compare()
+//        Collections.sort(studentList, new Comparator<Student>() {
+//            @Override
+//            public int compare(Student s1, Student s2) {
+//                return Integer.compare(s2.getStudentExamPoints(), s1.getStudentExamPoints());
+//            }
+//        });
+
+        System.out.println("Danh sách học sinh theo điểm giảm dần:");
+        for (Student s : studentList) {
+            System.out.println(s.getStudentName() + ": " + s.getStudentExamPoints());
+        }
+
     }
 }
