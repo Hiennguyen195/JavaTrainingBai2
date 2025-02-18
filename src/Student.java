@@ -1,29 +1,30 @@
 public class Student {
-    private String studentName;
-    private int studentExamPoints;
+    private String name;
+    private int score;
 
-    public Student(String studentName, int studentExamPoints) {
-        this.studentName = studentName;
-        this.studentExamPoints = studentExamPoints;
+
+    public Student(String name, int score) {
+        this.name = name;
+        this.score = score;
     }
-    public String getStudentName() {
-        return studentName;
+    public String getName() {
+        return name;
     }
-    public int getStudentExamPoints() {
-        return studentExamPoints;
+    public int getScore() {
+        return score;
     }
-    public void setStudentName(String studentName) {
-        this.studentName = studentName;
+    public void setName(String name) {
+        this.name = name;
     }
-    public void setStudentExamPoints(int studentExamPoints) {
-        this.studentExamPoints = studentExamPoints;
+    public void setScore(int score) {
+        this.score = score;
     }
 
     @Override
     public String toString() {
         return "Student {" +
-                "Student Name: '" + studentName + '\'' +
-                ", Points: " + studentExamPoints +
+                "Student Name: '" + name + '\'' +
+                ", Points: " + score +
                 '}';
     }
 
