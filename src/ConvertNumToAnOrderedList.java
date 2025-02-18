@@ -12,6 +12,7 @@ public class ConvertNumToAnOrderedList {
         System.out.println("Enter an number: "); // Nhập chuỗi cần sắp xếp
         inputNum = sc.nextLine();
         String[] numArr = inputNum.split("");
+
         List<String> numList = new ArrayList<>(Arrays.asList(numArr)); //Chuyển List sang ArrayList
         Collections.sort(numList); //Sắp xếp các phần tử trong ArrayList
         System.out.println("Sorted list: " + numList); //In ra list được sắp xếp
