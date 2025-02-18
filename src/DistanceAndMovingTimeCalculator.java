@@ -10,7 +10,7 @@ public class DistanceAndMovingTimeCalculator {
         //Input
         Scanner sc = new Scanner(System.in);
         System.out.print("Enter distance in meters: ");
-        distance = sc.nextInt();
+        distance = sc.nextDouble();
         System.out.print("Enter hour: ");
         hour = sc.nextInt();
         System.out.print("Enter minute: ");
@@ -20,9 +20,9 @@ public class DistanceAndMovingTimeCalculator {
         sc.close();
 
         // 1h = 60m = 3600s
-        double timeInSeconds = (hour * 3600) + (minute * 60) + second;
+        double timeInSeconds = (hour * 3600) + (minute * 60) + second;//Convert time to seconds to simplify calculations
         double speedInMeterPerSecond = distance / timeInSeconds; // Calculate m/s
-        double speedInKilometerPerHour = (distance/1000) / (timeInSeconds / 3600); //Calculate km/h
+        double speedInKilometerPerHour = (distance/1000) / (timeInSeconds/3600); //Calculate km/h
 
         //Output
         System.out.format("Speed in m/s: %.8f m/s\n", speedInMeterPerSecond );

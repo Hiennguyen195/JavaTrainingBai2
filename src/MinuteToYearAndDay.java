@@ -10,6 +10,7 @@ public class MinuteToYearAndDay {
         System.out.println("In order for the program to work, please enter a number that greater or equal than 1440!");
         System.out.print("Enter an input minute: "); // Nhap input
         inputMinute = sc.nextLong();
+        sc.close();
 
         // 1 year = 525600 minutes ( if every year have 365 days)
         if (inputMinute < 1440) {
