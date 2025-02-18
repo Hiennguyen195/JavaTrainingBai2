@@ -22,7 +22,8 @@ public class StudentManager {
             Student std = studentList.get(i);
             System.out.println(std.getName() + ": " + std.getScore());
         }
-        System.out.println("============================");
+
+        System.out.println("============================");//Phân chia hai bài
 
         //Tim sinh vien co diem cao nhat
         int point = 0;
@@ -35,7 +36,8 @@ public class StudentManager {
         }
         System.out.format("Học sinh có điểm cao nhất là %s với %d điểm\n", name, point);
 
-        System.out.println("============================");
+        System.out.println("============================");//Phân chia hai bài
+
         //In ra danh sach theo thu tu giam dan theo point
 
         //CÁCH 1: Sử dụng hàm lambda cho Java 8+, không phải ghi đè phương thức compare()

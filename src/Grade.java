@@ -1,6 +1,6 @@
 
 public enum Grade {
-    EXCELLENT(8.5, 10.0),
+    EXCELLENT(8.5, 10.0),//Tạo enum với các hạng và các tham số minScore, maxScore tương ứng
     GOOD(7.0,8.4),
     AVERAGE(5.0,6.9),
     WEAK(0.0,4.9);
