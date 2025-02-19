@@ -39,8 +39,8 @@ public class Product {
 
     @Override
     public String toString() {
-        return "Product [productName= " + productName + ", productPrice= " + productPrice + ", productStock= "
-                + productStock + ", productCategory= " + productCategory + "]";
+        return "Tên sản phẩm: " + productName + ", Giá sản phẩm: " + productPrice + "vnđ" + ", Số lượng trong kho: "
+                + productStock + ", Danh mục sản phẩm: " + productCategory;
     }
     public void showInfo() {
         System.out.println(toString());
