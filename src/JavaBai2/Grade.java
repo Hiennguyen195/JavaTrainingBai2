@@ -1,3 +1,4 @@
+package JavaBai2;
 
 public enum Grade {
     EXCELLENT(8.5, 10.0),//Tạo enum với các hạng và các tham số minScore, maxScore tương ứng

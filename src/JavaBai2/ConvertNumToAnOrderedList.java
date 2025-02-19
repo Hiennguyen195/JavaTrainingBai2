@@ -1,8 +1,9 @@
+package JavaBai2;
+
 import java.util.Arrays;
 import java.util.Scanner;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Collections;
 
 public class ConvertNumToAnOrderedList {
     public static void main(String[] args) {
