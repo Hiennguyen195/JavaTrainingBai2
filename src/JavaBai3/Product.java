@@ -3,13 +3,11 @@ package JavaBai3;
 public class Product {
     private String productName;
     private double productPrice;
-    private int productStock;
     private String productCategory;
 
-    public Product(String productName, double productPrice, int productStock, String productCategory) {
+    public Product(String productName, double productPrice, String productCategory) {
         this.productName = productName;
         this.productPrice = productPrice;
-        this.productStock = productStock;
         this.productCategory = productCategory;
     }
     public String getProductName() {
@@ -24,12 +22,6 @@ public class Product {
     public void setProductPrice(double productPrice) {
         this.productPrice = productPrice;
     }
-    public int getProductStock() {
-        return productStock;
-    }
-    public void setProductStock(int productStock) {
-        this.productStock = productStock;
-    }
     public String getProductCategory() {
         return productCategory;
     }
@@ -39,8 +31,8 @@ public class Product {
 
     @Override
     public String toString() {
-        return "Tên sản phẩm: " + productName + ", Giá sản phẩm: " + productPrice + "vnđ" + ", Số lượng trong kho: "
-                + productStock + ", Danh mục sản phẩm: " + productCategory;
+        return "Tên sản phẩm: " + productName + ", Giá sản phẩm: " + productPrice + "vnđ" + ", " +
+                "Danh mục sản phẩm: " + productCategory;
     }
     public void showInfo() {
         System.out.println(toString());

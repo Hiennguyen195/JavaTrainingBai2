@@ -1,9 +1,6 @@
 package JavaBai3;
 
-import java.util.Collections;
-import java.util.Scanner;
-import java.util.List;
-import java.util.ArrayList;
+import java.util.*;
 
 public class ProductManager {
     List<Product> productsList = new ArrayList<>(); //Tạo ArrayList quản lý Product
@@ -46,6 +43,24 @@ public class ProductManager {
         }
         System.out.format("Sản phẩm thuộc %s là: \n", category);
         for (Product product : filteredProducts) {
+            System.out.println(product.toString());
+        }
+    }
+    //Phương thức sắp xếp sản phẩm theo giá
+    public void sortProductsByPrice() {
+        //CÁCH 1: Cơ bản
+        Collections.sort(productsList, new Comparator<Product>() { //Tạo một comparator so sánh giá hai sản phẩm
+            @Override
+            public int compare(Product p1, Product p2) { //Nếu muốn xếp theo giảm dần chỉ cần đổi chỗ p1 và p2
+                return Double.compare(p1.getProductPrice(), p2.getProductPrice());
+            }
+        });
+        //CÁCH 2: Nhanh nhất, gọn nhất, dễ đọc nhất, sử dụng reversed() cho hiệu suất nhanh nhất
+//        productsList.sort(Comparator.comparing(Product::getProductPrice));//Tăng dần
+//        productsList.sort(Comparator.comparing(Product::getProductPrice).reversed());//Giảm dần
+
+        System.out.println("Danh sách sản phẩm theo giá tăng dần là: ");//In ra danh sách đã sắp xếp
+        for (Product product : productsList) {
             System.out.println(product.toString());
         }
     }
