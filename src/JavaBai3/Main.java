@@ -47,6 +47,32 @@ public class Main {
 
 //        System.out.println("========================================");//Ngăn cách dòng
 
+        User u1 = new User(1, "user1", "password1");
+        User u2 = new User(2, "user2", "password2");
+        User u3 = new User(3, "user3", "password3");
+        User u4 = new User(4, "user4", "password4");
+        User u5 = new User(5, "user5", "password5");
+        User u6 = new User(6, "user6", "password6");
+        User u7 = new User(7, "user7", "password7");
+        User u8 = new User(8, "user8", "password8");
+        User u9 = new User(9, "user9", "password9");
+
+        UserManager userManager = new UserManager();
+        userManager.addUser(u1);
+        userManager.addUser(u2);
+        userManager.addUser(u3);
+        userManager.addUser(u4);
+        userManager.addUser(u5);
+        userManager.addUser(u6);
+        userManager.addUser(u7);
+        userManager.addUser(u8);
+        userManager.addUser(u9);
+
+        userManager.showUsersInfo();
+
+        System.out.println("========================================");//Ngăn cách dòng
+
+        userManager.checkDuplicateEmail();
 
     }
 }
