@@ -72,7 +72,27 @@ public class Main {
 
         System.out.println("========================================");//Ngăn cách dòng
 
-        userManager.checkDuplicateEmail();
+        //Check email trùng lặp
+//        userManager.checkDuplicateEmail();
+
+        Category c1 = new Category("category1","Category1_Description");
+        Category c3 = new Category("category3","Category3_Description");
+        Category c5 = new Category("category5","Category5_Description");
+        Category c2 = new Category("category2","Category2_Description");
+        Category c9 = new Category("category9","Category9_Description");
+
+        CategoryManager cm = new CategoryManager();
+        cm.addCategory(c1);
+        cm.addCategory(c3);
+        cm.addCategory(c5);
+        cm.addCategory(c2);
+        cm.addCategory(c9);
+
+        cm.showCategories();
+
+        System.out.println("========================================");//Ngăn cách dòng
+
+
 
     }
 }
