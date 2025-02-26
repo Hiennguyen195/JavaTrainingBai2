@@ -1,12 +1,11 @@
 package JavaBai4;
 
 import java.util.*;
-import java.util.function.Function;
 import java.util.stream.Collectors;
 
 public class Bai7 {
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
+
         List<Person> peopleList = Arrays.asList(
                 new Person("Hien", 18),
                 new Person("Anh", 25),
