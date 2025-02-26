@@ -19,7 +19,7 @@ public class Bai5 {
 
         System.out.println("Danh sách vừa nhập: " + list);
         scanner.close();
-        
+
         //Tạo map để nhóm các list theo độ dài sử dụng groupingBy()
         Map<Integer, List<String>> map = list.stream()
                 .collect(Collectors.groupingBy(String::length));
